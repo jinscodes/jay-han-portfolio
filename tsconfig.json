@@ -1,0 +1,22 @@
+{
+  // "files": [],
+  // "references": [
+  //   { "path": "./tsconfig.app.json" },
+  //   { "path": "./tsconfig.node.json" }
+  // ],
+  "compilerOptions": {
+    "types": ["vite/client"],
+    "target": "es5",
+    "module": "commonjs",
+    "jsx": "react-jsx",
+    "strict": true,
+    "sourceMap": true,
+    "baseUrl": "./",
+    "paths": {
+      "@components/*": ["src/components/*"]
+    },
+    "outDir": "./dist"
+  },
+  "include": ["src", "src/custom.d.ts", "src/**/*.tsx", "src/**/*.ts"],
+  "exclude": ["node_modules", "src/**/*.test.ts"]
+}
