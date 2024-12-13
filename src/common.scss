@@ -1,0 +1,17 @@
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin horizontal-center {
+  display: flex;
+  justify-content: center;
+}
+
+$background-color: rgb(13, 13, 13);
