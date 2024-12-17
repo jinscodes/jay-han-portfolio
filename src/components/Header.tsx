@@ -1,7 +1,7 @@
 import { NavLink } from "react-router";
-import st from "./Left.module.scss";
+import st from "./header.module.scss";
 
-const Left = () => {
+const Header = () => {
   return (
     <section className={st.left_section}>
       <p className={st.name}>Jay Han</p>
@@ -17,4 +17,4 @@ const Left = () => {
   );
 };
 
-export default Left;
+export default Header;

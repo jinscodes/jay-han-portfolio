@@ -1,0 +1,54 @@
+// @use "../common.scss";
+
+.home {
+  width: 50%;
+  height: 100%;
+  background-color: white;
+}
+
+// .home {
+//   @include common.center;
+//   width: 100vw;
+//   height: 100vh;
+//   background-color: common.$background-color;
+
+//   .animation {
+//     width: calc(100% - 80px);
+//     height: calc(100% - 80px);
+//     animation: fade-in 3s;
+//     border: 1px solid rgba($color: #ffffff, $alpha: 0.8);
+
+//     .frame {
+//       box-sizing: border-box;
+//       display: flex;
+//       width: 100%;
+//       height: 100%;
+//       padding: 15px;
+//       background-image: url(../assets/image/bg.gif);
+//       background-size: cover;
+
+//       .outlet {
+//         width: 50%;
+//         height: 100%;
+//         background-color: #fff;
+//       }
+//     }
+//   }
+
+//   .copyright {
+//     position: absolute;
+//     bottom: 6px;
+//     left: 40px;
+//     font-size: 11px;
+//     color: rgba($color: #fff, $alpha: 0.4);
+//   }
+// }
+
+// @keyframes fade-in {
+//   from {
+//     opacity: 0;
+//   }
+//   to {
+//     opacity: 1;
+//   }
+// }

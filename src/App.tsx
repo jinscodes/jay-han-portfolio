@@ -1,6 +1,8 @@
-import Main from "@layouts/Main";
+import Header from "@components/Header";
 import Splash from "@layouts/Splash";
 import { useState } from "react";
+import { Outlet } from "react-router";
+import st from "./app.module.scss";
 
 function App() {
   const [splash, setSplash] = useState(true);
@@ -12,7 +14,18 @@ function App() {
   return (
     <>
       {splash && <Splash />}
-      {!splash && <Main />}
+      {!splash && (
+        <div>
+          <section className={st.main}>
+            <div className={st.frame}>
+              <Header />
+              <Outlet />
+            </div>
+
+            <p className={st.copyright}>© Jay Han</p>
+          </section>
+        </div>
+      )}
     </>
   );
 }
