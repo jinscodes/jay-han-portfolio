@@ -25,5 +25,9 @@
       color: rgba($color: #fff, $alpha: 0.3);
       transition: 0.5s;
     }
+
+    a.active {
+      color: red;
+    }
   }
 }
