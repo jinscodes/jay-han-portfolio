@@ -21,13 +21,20 @@
     row-gap: 15px;
     margin-top: 50px;
 
+    .bullet {
+      opacity: 1;
+      animation: fade-in 0.5s;
+    }
+
     a:hover {
       color: rgba($color: #fff, $alpha: 0.3);
       transition: 0.5s;
     }
+  }
+}
 
-    a.active {
-      color: red;
-    }
+@keyframes fade-in {
+  from {
+    opacity: 0;
   }
 }
