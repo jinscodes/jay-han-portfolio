@@ -1,9 +1,14 @@
-import { useState } from "react";
-import { NavLink } from "react-router";
+import { useEffect, useState } from "react";
+import { NavLink, useLocation } from "react-router";
 import st from "./header.module.scss";
-// ●
+
 const Header = () => {
+  const location = useLocation();
   const [menu, setMenu] = useState<string>("");
+
+  useEffect(() => {
+    setMenu(location.pathname);
+  }, [location]);
 
   return (
     <section className={st.left_section}>
