@@ -6,69 +6,40 @@ const Header = () => {
   const location = useLocation();
   const [menu, setMenu] = useState<string>("");
 
+  const menuItems = [
+    { key: "/", label: "Home", path: "/" },
+    { key: "/projects", label: "Projects", path: "/projects" },
+    { key: "/info", label: "Info", path: "/info" },
+    { key: "/contact", label: "Contact", path: "/contact" },
+    { key: "/FAQ", label: "FAQ", path: "/FAQ" },
+  ];
+
   useEffect(() => {
     setMenu(location.pathname);
   }, [location]);
+
+  console.log(menu);
 
   return (
     <section className={st.left_section}>
       <p className={st.name}>Jay Han</p>
       <p className={st.title}>Frontend & App Developer</p>
       <nav>
-        {menu === "" ? (
-          <span className={st.bullet}>●</span>
-        ) : (
-          <NavLink
-            to="/"
-            className={menu === "" ? st.active : ""}
-            onClick={() => setMenu("")}
-          >
-            Home
-          </NavLink>
-        )}
-        {menu === "projects" ? (
-          <span className={st.bullet}>●</span>
-        ) : (
-          <NavLink
-            to="/projects"
-            className={menu === "projects" ? st.active : ""}
-            onClick={() => setMenu("projects")}
-          >
-            Projects
-          </NavLink>
-        )}
-        {menu === "info" ? (
-          <span className={st.bullet}>●</span>
-        ) : (
-          <NavLink
-            to="/info"
-            className={menu === "info" ? st.active : ""}
-            onClick={() => setMenu("info")}
-          >
-            Info
-          </NavLink>
-        )}
-        {menu === "contact" ? (
-          <span className={st.bullet}>●</span>
-        ) : (
-          <NavLink
-            to="/contact"
-            className={menu === "contact" ? st.active : ""}
-            onClick={() => setMenu("contact")}
-          >
-            Contact
-          </NavLink>
-        )}
-        {menu === "FAQ" ? (
-          <span className={st.bullet}>●</span>
-        ) : (
-          <NavLink
-            to="/FAQ"
-            className={menu === "FAQ" ? st.active : ""}
-            onClick={() => setMenu("FAQ")}
-          >
-            FAQ
-          </NavLink>
+        {menuItems.map(({ key, label, path }) =>
+          menu === key ? (
+            <span key={label} className={st.bullet}>
+              ●
+            </span>
+          ) : (
+            <NavLink
+              key={key}
+              to={path}
+              className={menu === key ? st.active : ""}
+              onClick={() => setMenu(key)}
+            >
+              {label}
+            </NavLink>
+          )
         )}
       </nav>
     </section>
