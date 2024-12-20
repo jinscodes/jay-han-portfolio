@@ -12,7 +12,7 @@
     width: calc(100% - 80px);
     height: calc(100% - 80px);
     padding: 15px;
-    border: 1px solid rgba($color: #ffffff, $alpha: 0.8);
+    border: 1px solid common.$font-color;
     background-image: url(./assets/image/bg.gif);
     background-size: cover;
     animation: fade-in 3s;
@@ -23,7 +23,7 @@
     bottom: 6px;
     left: 40px;
     font-size: 11px;
-    color: rgba($color: #fff, $alpha: 0.4);
+    color: common.$hovered-font-color;
     animation: fade-in 3s;
   }
 }
