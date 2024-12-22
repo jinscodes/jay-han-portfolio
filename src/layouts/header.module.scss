@@ -1,0 +1,19 @@
+@use "../common.scss";
+
+.header {
+  width: 100%;
+  color: common.$font-color;
+
+  .name {
+    font-size: 60px;
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+  }
+
+  .title {
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+  }
+}

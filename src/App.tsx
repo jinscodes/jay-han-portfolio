@@ -1,30 +1,24 @@
-import Header from "@components/Header";
-import Splash from "@layouts/Splash";
-import { useState } from "react";
-import st from "./app.module.scss";
+import { BrowserRouter, Route, Routes } from "react-router";
+import Layout from "src/Layout";
+import Contact from "src/pages/Contact";
+import FAQ from "src/pages/FAQ";
+import Home from "src/pages/Home";
+import Info from "src/pages/Info";
+import Projects from "src/pages/Projects";
 
 function App() {
-  const [splash, setSplash] = useState(true);
-
-  setTimeout(() => {
-    setSplash(false);
-  }, 2500);
-
   return (
-    <>
-      {splash && <Splash />}
-      {!splash && (
-        <div>
-          <section className={st.main}>
-            <div className={st.frame}>
-              <Header />
-            </div>
-
-            <p className={st.copyright}>© Jay Han</p>
-          </section>
-        </div>
-      )}
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/info" element={<Info />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/faq" element={<FAQ />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
