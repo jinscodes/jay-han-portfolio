@@ -18,8 +18,6 @@ const Header = () => {
     setMenu(location.pathname);
   }, [location]);
 
-  console.log(menu);
-
   return (
     <section className={st.header}>
       <p className={st.name}>Jay Han</p>
