@@ -7,7 +7,7 @@ const Splash = () => {
   useEffect(() => {
     setTimeout(() => {
       setFadeOut(true);
-    }, 1500);
+    }, 2000);
   }, []);
 
   return (

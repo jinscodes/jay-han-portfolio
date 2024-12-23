@@ -7,11 +7,12 @@
   background-color: common.$background-color;
   @include common.center;
   gap: 15px;
+  animation: fade-in ease-in-out 0.5s;
 
   .name {
     font-size: 36px;
     opacity: 0;
-    animation: fade-out linear 1.5s;
+    animation: fade-out linear 2.5s;
   }
 
   .portfolio {
@@ -21,6 +22,15 @@
   .animPortfolio {
     opacity: 0;
     animation: fade-out linear 0.5s;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

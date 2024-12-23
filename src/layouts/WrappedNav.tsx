@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { NavLink, useLocation } from "react-router";
+import { LocationContext } from "src/App";
 import st from "./wrappedNav.module.scss";
 
 interface NavTypes {
@@ -10,7 +11,7 @@ interface NavTypes {
 
 const WrappedNav = () => {
   const location = useLocation();
-  const [curMenu, setCurMenu] = useState<string>("");
+  const { curMenu, setCurMenu } = useContext(LocationContext);
 
   const menus: NavTypes[] = [
     { key: "/", label: "Home", path: "/" },
