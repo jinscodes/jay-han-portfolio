@@ -1,7 +1,7 @@
 @use "../common.scss";
 
 .faq {
-  overflow: scroll;
+  overflow: auto;
   color: white;
   display: flex;
   flex-direction: column;
@@ -11,6 +11,12 @@
   height: calc(100% - 80px);
   margin-top: 50px;
   animation: fade-in ease-in-out 1.5s;
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 0)
+  );
+  scroll-behavior: smooth;
 
   div {
     display: flex;
@@ -22,6 +28,10 @@
     p {
       color: common.$font-color;
     }
+  }
+
+  div:last-child {
+    margin-bottom: 100px;
   }
 }
 
