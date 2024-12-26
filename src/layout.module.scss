@@ -7,11 +7,12 @@
 
   .frame {
     box-sizing: border-box;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     width: calc(100% - 80px);
     height: calc(100% - 80px);
-    padding: 15px;
+    padding: 30px;
     border: 1px solid common.$font-color;
     background-image: url(./assets/image/bg.gif);
     background-size: cover;
