@@ -6,7 +6,7 @@ const Contact = () => {
     <section className={st.contact}>
       <div>
         <a href="">
-          About the request
+          To contact me
           <Arrow />
         </a>
       </div>

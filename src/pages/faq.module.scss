@@ -2,7 +2,6 @@
 
 .faq {
   overflow: auto;
-  color: white;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -10,6 +9,7 @@
   width: 100%;
   height: calc(100% - 80px);
   margin-top: 50px;
+  color: white;
   animation: fade-in ease-in-out 1.5s;
   mask-image: linear-gradient(
     to bottom,
