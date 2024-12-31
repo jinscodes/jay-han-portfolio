@@ -13,7 +13,7 @@
   animation: fade-in ease-in-out 1.5s;
   mask-image: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 1) 80%,
     rgba(0, 0, 0, 0)
   );
   scroll-behavior: smooth;
@@ -31,7 +31,7 @@
   }
 
   div:last-child {
-    margin-bottom: 100px;
+    margin-bottom: 150px;
   }
 }
 
