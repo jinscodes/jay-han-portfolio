@@ -39,6 +39,10 @@ const personalProjects: ProjectsType[] = [
     date: "2024.01 ~ ing",
     name: "MY ROUTINE",
   },
+  {
+    date: "2024.10 ~ ing",
+    name: "TEAM BREEDERS",
+  },
 ];
 
 const Projects = () => {
