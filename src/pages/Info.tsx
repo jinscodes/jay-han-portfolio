@@ -39,7 +39,7 @@ const Info = () => {
         },
         {
           domain: "Instagram",
-          url: "https://www.instagram.com/jin_sung_h/",
+          url: "https://www.instagram.com/_jay_h_99/",
         },
       ],
     },
