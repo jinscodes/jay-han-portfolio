@@ -57,9 +57,19 @@ const Projects = () => {
         ))}
         {personalProjects.map(({ date, name, a }) => (
           <li>
-            <a href={a} target="_blank"></a>
             <span className={st.period}>{date}</span>
-            <span className={st.project}>{name}</span>
+            {a ? (
+              <a
+                href={a}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={st.link}
+              >
+                <span className={st.project}>{name}</span>
+              </a>
+            ) : (
+              <span className={st.project}>{name}</span>
+            )}
           </li>
         ))}
       </ul>

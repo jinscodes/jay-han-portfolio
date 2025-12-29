@@ -46,8 +46,9 @@ const Info = () => {
   ];
 
   const otherItems = [
-    "Stonybrook University at SUNY",
-    "Union Contents",
+    "Stonybrook University at SUNY (2019 ~ 2022)",
+    "Union Contents Software Company (2022.08 ~ 2024.10)",
+    "Illinois Tech (2025.08 ~ ing)",
     "Team Breeders",
   ];
 

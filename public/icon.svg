@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="frame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f2f2f2"/>
+      <stop offset="1" stop-color="#bdbdbd"/>
+    </linearGradient>
+
+    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b2b2b"/>
+      <stop offset="1" stop-color="#0f0f0f"/>
+    </linearGradient>
+
+    <linearGradient id="stand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e9e9e9"/>
+      <stop offset="1" stop-color="#9d9d9d"/>
+    </linearGradient>
+
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- base shadow plate -->
+  <rect x="28" y="196" width="200" height="30" rx="10" fill="#2a2a2a" opacity="0.9"/>
+
+  <!-- monitor body -->
+  <g filter="url(#shadow)">
+    <!-- outer frame -->
+    <rect x="40" y="32" width="176" height="126" rx="12" fill="url(#frame)"/>
+    <!-- inner bezel -->
+    <rect x="50" y="42" width="156" height="106" rx="8" fill="#d8d8d8"/>
+    <!-- screen -->
+    <rect x="58" y="50" width="140" height="90" rx="6" fill="url(#screen)"/>
+
+    <!-- glossy highlight -->
+    <path d="M150 50 H198 V140 H128 Z" fill="#ffffff" opacity="0.12"/>
+
+    <!-- stand neck -->
+    <rect x="112" y="158" width="32" height="34" rx="8" fill="url(#stand)"/>
+
+    <!-- stand foot -->
+    <path d="M76 196
+             C96 182, 160 182, 180 196
+             C166 206, 90 206, 76 196 Z"
+          fill="url(#stand)"/>
+  </g>
+</svg>
