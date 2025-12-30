@@ -50,6 +50,7 @@ const Info = () => {
     "Union Contents Software Company (2022.08 ~ 2024.10)",
     "Illinois Tech (2025.08 ~ ing)",
     "Team Breeders",
+    "Team Practo",
   ];
 
   return (
