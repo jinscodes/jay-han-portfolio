@@ -50,13 +50,13 @@ const Projects = () => {
     <section className={st.projects}>
       <ul>
         {corperateProjects.map(({ date, name }) => (
-          <li>
+          <li key={name}>
             <span className={st.period}>{date}</span>
             <span className={st.project}>{name}</span>
           </li>
         ))}
         {personalProjects.map(({ date, name, a }) => (
-          <li>
+          <li key={name}>
             <span className={st.period}>{date}</span>
             {a ? (
               <a

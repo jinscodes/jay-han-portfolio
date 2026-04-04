@@ -1,42 +1,57 @@
-@use "../common";
-
 .splash {
   width: 100vw;
   height: 100vh;
-  color: white;
-  background-color: common.$background-color;
-  @include common.center;
-  gap: 15px;
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(
+      ellipse 280px 280px at center,
+      #ffffff 60%,
+      transparent 100%
+    ),
+    radial-gradient(circle, #bbb 1.5px, transparent 1.5px);
+  background-size:
+    100% 100%,
+    28px 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
   animation: fade-in ease-in-out 0.5s;
 
-  .name {
-    font-size: 36px;
-    opacity: 0;
-    animation: fade-out linear 2.5s;
+  .center {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .portfolio {
-    color: rgba($color: #ffffff, $alpha: 0.7);
+  .orbitSvg {
+    position: absolute;
+    animation: fade-out linear 2.5s forwards;
+  }
+
+  .orbitText {
+    fill: rgba(17, 17, 17, 0.45);
+    font-size: 15px;
+    letter-spacing: 0.55em;
+  }
+
+  .name {
+    font-size: 22px;
+    color: #111111;
+    animation: fade-out linear 2.5s forwards;
   }
 
   .animPortfolio {
+    color: rgba(17, 17, 17, 0.4);
     opacity: 0;
     animation: fade-out linear 0.5s;
   }
 }
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 @keyframes fade-out {
   from {
-    opacity: 0.7;
+    opacity: 1;
   }
   to {
     opacity: 0;

@@ -28,7 +28,7 @@ const FAQ = () => {
   return (
     <section className={st.faq}>
       {faq.map(({ question, answer }) => (
-        <QA question={question} answer={answer} />
+        <QA question={question} answer={answer} key={question} />
       ))}
     </section>
   );

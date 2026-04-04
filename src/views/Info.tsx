@@ -57,10 +57,10 @@ const Info = () => {
     <section className={st.info}>
       <ul>
         {linkGroup.map((group) => (
-          <>
+          <div key={group.title}>
             {group.links.map((el) => (
-              <li>
-                <a href={el.url} target="_blank">
+              <li key={el.url}>
+                <a href={el.url} target="_blank" rel="noopener noreferrer">
                   {el.domain}
                   <Arrow />
                 </a>
@@ -68,11 +68,11 @@ const Info = () => {
             ))}
             <br />
             <br />
-          </>
+          </div>
         ))}
 
         {otherItems.map((el) => (
-          <li>{el}</li>
+          <li key={el}>{el}</li>
         ))}
       </ul>
     </section>

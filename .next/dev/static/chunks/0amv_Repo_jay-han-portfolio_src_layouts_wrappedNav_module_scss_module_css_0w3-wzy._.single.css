@@ -1,8 +1,8 @@
 /* [project]/Desktop/Repo/jay-han-portfolio/src/layouts/wrappedNav.module.scss.module.css [app-client] (css) */
 .wrappedNav-module-scss-module__pbKPEq__nav {
-  flex-direction: column;
-  row-gap: 15px;
-  margin-top: 50px;
+  letter-spacing: .03em;
+  flex-direction: row;
+  column-gap: 32px;
   font-size: 13px;
   display: flex;
 }
@@ -12,9 +12,15 @@
   animation: .5s ease-in-out wrappedNav-module-scss-module__pbKPEq__fade-in;
 }
 
+.wrappedNav-module-scss-module__pbKPEq__nav a {
+  color: #fffc;
+  opacity: .55;
+  text-decoration: none;
+  transition: opacity .3s;
+}
+
 .wrappedNav-module-scss-module__pbKPEq__nav a:hover {
-  color: #ffffff4d;
-  transition: all .5s;
+  opacity: 1;
 }
 
 @keyframes wrappedNav-module-scss-module__pbKPEq__fade-in {

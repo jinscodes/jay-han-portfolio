@@ -7,15 +7,11 @@ export const metadata: Metadata = {
   description: "Frontend & App Developer Portfolio",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout() {
   return (
     <html lang="en">
       <body>
-        <Layout>{children}</Layout>
+        <Layout />
       </body>
     </html>
   );

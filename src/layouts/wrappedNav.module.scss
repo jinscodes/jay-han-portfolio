@@ -2,19 +2,25 @@
 
 .nav {
   display: flex;
-  flex-direction: column;
-  margin-top: 50px;
-  row-gap: 15px;
+  flex-direction: row;
+  column-gap: 32px;
   font-size: 13px;
+  letter-spacing: 0.03em;
 
   .bullet {
     opacity: 1;
     animation: fade-in ease-in-out 0.5s;
   }
 
+  a {
+    color: common.$font-color;
+    opacity: 0.55;
+    text-decoration: none;
+    transition: opacity 0.3s;
+  }
+
   a:hover {
-    color: common.$hovered-font-color;
-    transition: 0.5s;
+    opacity: 1;
   }
 }
 

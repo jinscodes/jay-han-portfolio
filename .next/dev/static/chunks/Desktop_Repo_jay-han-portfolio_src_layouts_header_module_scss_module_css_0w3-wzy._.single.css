@@ -1,20 +1,22 @@
 /* [project]/Desktop/Repo/jay-han-portfolio/src/layouts/header.module.scss.module.css [app-client] (css) */
 .header-module-scss-module__OFJkRq__header {
   color: #fffc;
-  width: 100%;
 }
 
 .header-module-scss-module__OFJkRq__header .header-module-scss-module__OFJkRq__name {
-  margin: 0;
+  letter-spacing: .04em;
+  margin: 0 0 4px;
   padding: 0;
-  font-size: 60px;
-  font-weight: 300;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .header-module-scss-module__OFJkRq__header .header-module-scss-module__OFJkRq__title {
+  opacity: .45;
+  letter-spacing: .03em;
   margin: 0;
   padding: 0;
-  font-size: 13px;
+  font-size: 11px;
 }
 
 /*# sourceMappingURL=Desktop_Repo_jay-han-portfolio_src_layouts_header_module_scss_module_css_0w3-wzy._.single.css.map*/

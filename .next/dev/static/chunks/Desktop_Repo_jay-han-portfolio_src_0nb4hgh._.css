@@ -1,29 +1,32 @@
 /* [project]/Desktop/Repo/jay-han-portfolio/src/layouts/header.module.scss.module.css [app-client] (css) */
 .header-module-scss-module__OFJkRq__header {
   color: #fffc;
-  width: 100%;
 }
 
 .header-module-scss-module__OFJkRq__header .header-module-scss-module__OFJkRq__name {
-  margin: 0;
+  letter-spacing: .04em;
+  margin: 0 0 4px;
   padding: 0;
-  font-size: 60px;
-  font-weight: 300;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .header-module-scss-module__OFJkRq__header .header-module-scss-module__OFJkRq__title {
+  opacity: .45;
+  letter-spacing: .03em;
   margin: 0;
   padding: 0;
-  font-size: 13px;
+  font-size: 11px;
 }
 
 /* [project]/Desktop/Repo/jay-han-portfolio/src/layouts/splash.module.scss.module.css [app-client] (css) */
 .splash-module-scss-module__ga_AQW__splash {
-  color: #fff;
-  background-color: #0d0d0d;
+  background-color: #fff;
+  background-image: radial-gradient(260px 130px, #fff 60%, #0000 100%), radial-gradient(circle, #bbb 1.5px, #0000 1.5px);
+  background-size: 100% 100%, 28px 28px;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
   width: 100vw;
   height: 100vh;
   animation: .5s ease-in-out splash-module-scss-module__ga_AQW__fade-in;
@@ -31,33 +34,20 @@
 }
 
 .splash-module-scss-module__ga_AQW__splash .splash-module-scss-module__ga_AQW__name {
-  opacity: 0;
+  color: #111;
   font-size: 36px;
-  animation: 2.5s linear splash-module-scss-module__ga_AQW__fade-out;
-}
-
-.splash-module-scss-module__ga_AQW__splash .splash-module-scss-module__ga_AQW__portfolio {
-  color: #ffffffb3;
+  animation: 2.5s linear forwards splash-module-scss-module__ga_AQW__fade-out;
 }
 
 .splash-module-scss-module__ga_AQW__splash .splash-module-scss-module__ga_AQW__animPortfolio {
+  color: #1116;
   opacity: 0;
   animation: .5s linear splash-module-scss-module__ga_AQW__fade-out;
 }
 
-@keyframes splash-module-scss-module__ga_AQW__fade-in {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 @keyframes splash-module-scss-module__ga_AQW__fade-out {
   from {
-    opacity: .7;
+    opacity: 1;
   }
 
   to {
@@ -67,9 +57,9 @@
 
 /* [project]/Desktop/Repo/jay-han-portfolio/src/layouts/wrappedNav.module.scss.module.css [app-client] (css) */
 .wrappedNav-module-scss-module__pbKPEq__nav {
-  flex-direction: column;
-  row-gap: 15px;
-  margin-top: 50px;
+  letter-spacing: .03em;
+  flex-direction: row;
+  column-gap: 32px;
   font-size: 13px;
   display: flex;
 }
@@ -79,9 +69,15 @@
   animation: .5s ease-in-out wrappedNav-module-scss-module__pbKPEq__fade-in;
 }
 
+.wrappedNav-module-scss-module__pbKPEq__nav a {
+  color: #fffc;
+  opacity: .55;
+  text-decoration: none;
+  transition: opacity .3s;
+}
+
 .wrappedNav-module-scss-module__pbKPEq__nav a:hover {
-  color: #ffffff4d;
-  transition: all .5s;
+  opacity: 1;
 }
 
 @keyframes wrappedNav-module-scss-module__pbKPEq__fade-in {
@@ -105,31 +101,39 @@
 
 .layout-module-scss-module__XM1RcG__layout .layout-module-scss-module__XM1RcG__frame {
   box-sizing: border-box;
-  background-image: url("../media/bg.13ytq5en6z4vi.gif");
-  background-size: cover;
-  border: 1px solid #fffc;
+  background-color: #0d0d0d;
+  background-image: radial-gradient(circle, #ffffff2e 1.5px, #0000 1.5px);
+  background-size: 28px 28px;
   flex-direction: column;
-  width: calc(100% - 80px);
-  height: calc(100% - 80px);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   padding: 30px;
   animation: 3s layout-module-scss-module__XM1RcG__fade-in;
   display: flex;
+  position: relative;
   overflow: hidden;
 }
 
-.layout-module-scss-module__XM1RcG__layout .layout-module-scss-module__XM1RcG__frame .layout-module-scss-module__XM1RcG__contents {
-  gap: 100px;
-  width: 100%;
-  height: 100%;
-  display: flex;
+.layout-module-scss-module__XM1RcG__layout .layout-module-scss-module__XM1RcG__frame:after {
+  content: "";
+  -webkit-mask-image: radial-gradient(circle 120px at var(--mouse-x, -999px) var(--mouse-y, -999px), black 0%, transparent 100%);
+  mask-image: radial-gradient(circle 120px at var(--mouse-x, -999px) var(--mouse-y, -999px), black 0%, transparent 100%);
+  pointer-events: none;
+  background-image: radial-gradient(circle, #ffffffd9 1.5px, #0000 1.5px);
+  background-size: 28px 28px;
+  position: absolute;
+  inset: 0;
 }
 
-.layout-module-scss-module__XM1RcG__layout .layout-module-scss-module__XM1RcG__frame .layout-module-scss-module__XM1RcG__copyright {
-  color: #ffffff4d;
-  font-size: 11px;
-  position: absolute;
-  bottom: 6px;
-  left: 40px;
+.layout-module-scss-module__XM1RcG__layout .layout-module-scss-module__XM1RcG__frame .layout-module-scss-module__XM1RcG__name {
+  color: #fffc;
+  letter-spacing: .06em;
+  z-index: 1;
+  margin: 0;
+  font-size: 48px;
+  font-weight: 300;
 }
 
 @keyframes layout-module-scss-module__XM1RcG__fade-in {

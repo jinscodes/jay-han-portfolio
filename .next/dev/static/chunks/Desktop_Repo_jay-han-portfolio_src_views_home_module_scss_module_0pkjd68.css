@@ -1,17 +1,19 @@
 /* [project]/Desktop/Repo/jay-han-portfolio/src/views/home.module.scss.module.css [app-client] (css) */
 .home-module-scss-module__Z8MpIa__home {
   color: #fff;
-  place-items: end;
+  justify-content: flex-start;
+  align-items: flex-end;
   width: 100%;
   height: 100%;
   animation: 1.5s ease-in-out home-module-scss-module__Z8MpIa__fade-in;
-  display: grid;
+  display: flex;
 }
 
 .home-module-scss-module__Z8MpIa__home p {
-  width: 125px;
+  opacity: .7;
+  width: 180px;
   font-size: 13px;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 @keyframes home-module-scss-module__Z8MpIa__fade-in {

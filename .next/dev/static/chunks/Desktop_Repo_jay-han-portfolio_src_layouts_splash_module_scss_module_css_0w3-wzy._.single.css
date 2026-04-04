@@ -1,44 +1,50 @@
 /* [project]/Desktop/Repo/jay-han-portfolio/src/layouts/splash.module.scss.module.css [app-client] (css) */
 .splash-module-scss-module__ga_AQW__splash {
-  color: #fff;
-  background-color: #0d0d0d;
+  background-color: #fff;
+  background-image: radial-gradient(280px 280px, #fff 60%, #0000 100%), radial-gradient(circle, #bbb 1.5px, #0000 1.5px);
+  background-size: 100% 100%, 28px 28px;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
   width: 100vw;
   height: 100vh;
   animation: .5s ease-in-out splash-module-scss-module__ga_AQW__fade-in;
   display: flex;
 }
 
-.splash-module-scss-module__ga_AQW__splash .splash-module-scss-module__ga_AQW__name {
-  opacity: 0;
-  font-size: 36px;
-  animation: 2.5s linear splash-module-scss-module__ga_AQW__fade-out;
+.splash-module-scss-module__ga_AQW__splash .splash-module-scss-module__ga_AQW__center {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
 }
 
-.splash-module-scss-module__ga_AQW__splash .splash-module-scss-module__ga_AQW__portfolio {
-  color: #ffffffb3;
+.splash-module-scss-module__ga_AQW__splash .splash-module-scss-module__ga_AQW__orbitSvg {
+  animation: 2.5s linear forwards splash-module-scss-module__ga_AQW__fade-out;
+  position: absolute;
+}
+
+.splash-module-scss-module__ga_AQW__splash .splash-module-scss-module__ga_AQW__orbitText {
+  fill: #11111173;
+  letter-spacing: .55em;
+  font-size: 15px;
+}
+
+.splash-module-scss-module__ga_AQW__splash .splash-module-scss-module__ga_AQW__name {
+  color: #111;
+  font-size: 22px;
+  animation: 2.5s linear forwards splash-module-scss-module__ga_AQW__fade-out;
 }
 
 .splash-module-scss-module__ga_AQW__splash .splash-module-scss-module__ga_AQW__animPortfolio {
+  color: #1116;
   opacity: 0;
   animation: .5s linear splash-module-scss-module__ga_AQW__fade-out;
 }
 
-@keyframes splash-module-scss-module__ga_AQW__fade-in {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 @keyframes splash-module-scss-module__ga_AQW__fade-out {
   from {
-    opacity: .7;
+    opacity: 1;
   }
 
   to {
