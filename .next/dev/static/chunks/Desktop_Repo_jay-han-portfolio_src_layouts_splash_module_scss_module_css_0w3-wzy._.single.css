@@ -1,0 +1,49 @@
+/* [project]/Desktop/Repo/jay-han-portfolio/src/layouts/splash.module.scss.module.css [app-client] (css) */
+.splash-module-scss-module__ga_AQW__splash {
+  color: #fff;
+  background-color: #0d0d0d;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 100vw;
+  height: 100vh;
+  animation: .5s ease-in-out splash-module-scss-module__ga_AQW__fade-in;
+  display: flex;
+}
+
+.splash-module-scss-module__ga_AQW__splash .splash-module-scss-module__ga_AQW__name {
+  opacity: 0;
+  font-size: 36px;
+  animation: 2.5s linear splash-module-scss-module__ga_AQW__fade-out;
+}
+
+.splash-module-scss-module__ga_AQW__splash .splash-module-scss-module__ga_AQW__portfolio {
+  color: #ffffffb3;
+}
+
+.splash-module-scss-module__ga_AQW__splash .splash-module-scss-module__ga_AQW__animPortfolio {
+  opacity: 0;
+  animation: .5s linear splash-module-scss-module__ga_AQW__fade-out;
+}
+
+@keyframes splash-module-scss-module__ga_AQW__fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes splash-module-scss-module__ga_AQW__fade-out {
+  from {
+    opacity: .7;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=Desktop_Repo_jay-han-portfolio_src_layouts_splash_module_scss_module_css_0w3-wzy._.single.css.map*/

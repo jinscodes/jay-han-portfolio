@@ -1,0 +1,15 @@
+/* [project]/Desktop/Repo/jay-han-portfolio/src/index.css [app-client] (css) */
+html, body {
+  color: #fff;
+  background-color: #0d0d0d;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+
+:is(html, body) a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=Desktop_Repo_jay-han-portfolio_src_index_css_0w3-wzy._.single.css.map*/

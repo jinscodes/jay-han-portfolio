@@ -1,0 +1,30 @@
+/* [project]/Desktop/Repo/jay-han-portfolio/src/layouts/wrappedNav.module.scss.module.css [app-client] (css) */
+.wrappedNav-module-scss-module__pbKPEq__nav {
+  flex-direction: column;
+  row-gap: 15px;
+  margin-top: 50px;
+  font-size: 13px;
+  display: flex;
+}
+
+.wrappedNav-module-scss-module__pbKPEq__nav .wrappedNav-module-scss-module__pbKPEq__bullet {
+  opacity: 1;
+  animation: .5s ease-in-out wrappedNav-module-scss-module__pbKPEq__fade-in;
+}
+
+.wrappedNav-module-scss-module__pbKPEq__nav a:hover {
+  color: #ffffff4d;
+  transition: all .5s;
+}
+
+@keyframes wrappedNav-module-scss-module__pbKPEq__fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=0amv_Repo_jay-han-portfolio_src_layouts_wrappedNav_module_scss_module_css_0w3-wzy._.single.css.map*/

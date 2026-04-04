@@ -1,0 +1,12 @@
+var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/_not-found/page.js")
+R.c("server/chunks/ssr/[root-of-the-server]__10eill_._.js")
+R.c("server/chunks/ssr/0eul_next_dist_esm_build_templates_app-page_0neohp4.js")
+R.c("server/chunks/ssr/[root-of-the-server]__0d2xf.l._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__01l8~eo._.js")
+R.c("server/chunks/ssr/Desktop_Repo_jay-han-portfolio_01x4d18._.js")
+R.c("server/chunks/ssr/0eul_next_dist_client_components_0bhtdu9._.js")
+R.c("server/chunks/ssr/0eul_next_dist_client_components_builtin_forbidden_0sxeo~p.js")
+R.c("server/chunks/ssr/0eul_next_dist_client_components_builtin_unauthorized_0db7l87.js")
+R.c("server/chunks/ssr/07fo_jay-han-portfolio__next-internal_server_app__not-found_page_actions_0r8r9k2.js")
+R.m(43970)
+module.exports=R.m(43970).exports

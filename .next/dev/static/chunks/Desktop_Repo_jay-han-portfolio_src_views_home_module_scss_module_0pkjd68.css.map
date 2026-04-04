@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///turbopack:///[project]/Desktop/Repo/jay-han-portfolio/src/views/home.module.scss"],"sourcesContent":[".home {\n  color: white;\n  display: grid;\n  place-items: end end;\n  width: 100%;\n  height: 100%;\n  animation: fade-in ease-in-out 1.5s;\n\n  p {\n    width: 125px;\n    font-size: 13px;\n    line-height: 1.5;\n  }\n}\n\n@keyframes fade-in {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n"],"names":[],"mappings":"AAAA;;;;;;;;;AAQE;;;;;;AAOF"}}]
+}

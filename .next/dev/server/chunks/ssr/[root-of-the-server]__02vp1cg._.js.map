@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 9, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/Desktop/Repo/jay-han-portfolio/src/views/home.module.scss [app-rsc] (css module)"],"sourcesContent":["__turbopack_context__.v({\n  \"fade-in\": \"home-module-scss-module__Z8MpIa__fade-in\",\n  \"home\": \"home-module-scss-module__Z8MpIa__home\",\n});\n"],"names":[],"mappings":"AAAA;AACA;AACA;AACA"}},
+    {"offset": {"line": 17, "column": 0}, "map": {"version":3,"sources":["file:///Users/jayhan/Desktop/Repo/jay-han-portfolio/src/views/Home.tsx"],"sourcesContent":["import st from \"./home.module.scss\";\n\nconst Home = () => {\n  return (\n    <section className={st.home}>\n      <p>\n        Hello,\n        <br /> I'm a web programmer based in Chicago, USA.\n        <br />I believe web programming can be more diverse and inspiring.\n        <br />\n        With a mission to present the possibilities of web programming, I'm\n        pursuing new expressions through experiments and thoughts.\n      </p>\n    </section>\n  );\n};\n\nexport default Home;\n"],"names":["Home","className","home"],"mappings":";;;;;AAAA;;;AAEA,MAAMA,OAAO;IACX,qBACE,4RAAC;QAAQC,WAAW,0LAAE,CAACC,IAAI;kBACzB,cAAA,4RAAC;;gBAAE;8BAED,4RAAC;;;;;gBAAK;8BACN,4RAAC;;;;;gBAAK;8BACN,4RAAC;;;;;gBAAK;;;;;;;;;;;;AAMd;uCAEeF"}},
+    {"offset": {"line": 66, "column": 0}, "map": {"version":3,"sources":["file:///Users/jayhan/Desktop/Repo/jay-han-portfolio/app/page.tsx"],"sourcesContent":["import Home from \"../src/views/Home\";\n\nexport default function Page() {\n  return <Home />;\n}\n"],"names":["Page"],"mappings":";;;;;AAAA;;;AAEe,SAASA;IACtB,qBAAO,4RAAC,8KAAI;;;;;AACd"}}]
+}

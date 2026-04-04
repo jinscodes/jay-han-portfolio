@@ -1,6 +1,7 @@
-import { useContext, useEffect } from "react";
-import { NavLink, useLocation } from "react-router";
-import { LocationContext } from "src/App";
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import st from "./wrappedNav.module.scss";
 
 interface NavTypes {
@@ -10,37 +11,27 @@ interface NavTypes {
 }
 
 const WrappedNav = () => {
-  const location = useLocation();
-  const { curMenu, setCurMenu } = useContext(LocationContext);
+  const pathname = usePathname();
 
   const menus: NavTypes[] = [
     { key: "/", label: "Home", path: "/" },
     { key: "/projects", label: "Projects", path: "/projects" },
     { key: "/info", label: "Info", path: "/info" },
     { key: "/contact", label: "Contact", path: "/contact" },
-    { key: "/FAQ", label: "FAQ", path: "/FAQ" },
+    { key: "/faq", label: "FAQ", path: "/faq" },
   ];
-
-  useEffect(() => {
-    setCurMenu(location.pathname);
-  }, [location]);
 
   return (
     <nav className={st.nav}>
       {menus.map(({ key, label, path }) =>
-        curMenu === key ? (
+        pathname === key ? (
           <span key={label} className={st.bullet}>
             ●
           </span>
         ) : (
-          <NavLink
-            key={key}
-            to={path}
-            className={curMenu === key ? st.active : ""}
-            onClick={() => setCurMenu(key)}
-          >
+          <Link key={key} href={path} className={pathname === key ? st.active : ""}>
             {label}
-          </NavLink>
+          </Link>
         )
       )}
     </nav>
