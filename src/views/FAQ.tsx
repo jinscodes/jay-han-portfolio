@@ -8,22 +8,17 @@ const faqs = [
   {
     question: "Who are you?",
     answer:
-      "I'm Jay Han — a frontend developer born in 1999, currently based in Chicago, IL. I study at Illinois Institute of Technology and spend most of my time thinking about how interfaces feel, not just how they look.",
+      "I'm Jay Han — a software developer born in 1999, currently based in Chicago, IL. I study at Illinois Institute of Technology and spend most of my time thinking about how interfaces feel, not just how they look. Lately I've been deeply interested in AI and how it's reshaping the way we build and interact with software.",
   },
   {
     question: "What do you specialize in?",
     answer:
-      "I focus on frontend development with React and Next.js, building performant and accessible UIs. I care about clean architecture, design systems, and the small details that make an experience feel polished.",
-  },
-  {
-    question: "Where did this portfolio design come from?",
-    answer:
-      "The visual direction was inspired by Keita Yamada's portfolio. The code and structure are entirely my own — written from scratch with Next.js, TypeScript, and SCSS modules.",
+      "I am a front-end focused software engineer with a specialization in building highly interactive, performant user interfaces. While I have a solid understanding of the full stack, my expertise lies in the modern JavaScript ecosystem and component-driven architecture.\nI approach development as a problem-solver first; I don't just build layouts, I focus on optimizing the 'Time to Interactive' and ensuring that the frontend remains scalable and maintainable. I specialize in bridging the gap between complex backend data and an intuitive, accessible user experience.",
   },
   {
     question: "Can I use or reference this code?",
     answer:
-      "The code is freely available on GitHub — feel free to use or fork it. The design direction is inspired by existing work, so take that into account before replicating it wholesale.",
+      "The code is freely available on GitHub — feel free to use or fork it.",
   },
   {
     question: "What are you working on right now?",
