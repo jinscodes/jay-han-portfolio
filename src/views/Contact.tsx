@@ -1,7 +1,9 @@
+import Fireworks from "@components/Fireworks";
 import st from "./contact.module.scss";
 
 const Contact = () => (
   <div className={st.contact}>
+    <Fireworks />
     <div className={st.inner}>
       <span className={st.label}>Contact</span>
 

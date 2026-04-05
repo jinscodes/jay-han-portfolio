@@ -167,6 +167,23 @@ const Layout = () => {
         </section>
       </div>
       {activeId !== "home" && (
+        <nav className={st.sideNav}>
+          <ul className={st.sideNavList}>
+            {MENUS.filter(({ id }) => id !== "home").map(({ label, id }) => (
+              <li
+                key={id}
+                className={`${st.sideNavItem} ${activeId === id ? st.sideNavActive : ""}`}
+              >
+                <button onClick={() => scrollTo(id)} className={st.sideNavBtn}>
+                  <span className={st.sideNavDot} />
+                  <span className={st.sideNavLabel}>{label}</span>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
+      {activeId !== "home" && (
         <button
           className={st.scrollTop}
           onClick={() => scrollTo("home")}
