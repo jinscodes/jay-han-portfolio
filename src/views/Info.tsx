@@ -1,5 +1,33 @@
 import st from "./info.module.scss";
 
+// ECG: 2 cycles each 500 units tall. Long flat → sharp QRS only.
+// Center x=3, viewBox width=18 (viewBox "-6 0 18 TOTAL")
+function ecgCycle(y0: number): string {
+  const x = 3;
+  return [
+    // long flat approach
+    `L ${x}       ${y0 + 300}`,
+    // sharp Q dip
+    `L ${x - 1.5} ${y0 + 308}`,
+    // sharp R peak
+    `L ${x + 6}   ${y0 + 320}`,
+    // sharp S dip
+    `L ${x - 5}   ${y0 + 332}`,
+    // back to baseline
+    `L ${x}       ${y0 + 340}`,
+    // flat tail
+    `L ${x}       ${y0 + 500}`,
+  ].join(" ");
+}
+
+const CYCLES = 2;
+const ecgPath = [
+  "M 3 0",
+  "L 3 0",
+  ...Array.from({ length: CYCLES }, (_, i) => ecgCycle(i * 500)),
+].join(" ");
+const TOTAL = CYCLES * 500;
+
 const socialLinks = [
   { label: "GitHub", url: "https://github.com/jinscodes" },
   {
@@ -56,6 +84,47 @@ const Info = () => (
           </li>
         ))}
       </ul>
+    </div>
+
+    {/* ECG heartbeat divider */}
+    <div className={st.dividerWrap}>
+      <svg
+        className={st.ecgSvg}
+        viewBox={`-6 0 18 ${TOTAL}`}
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <filter id="ecgGlow" x="-500%" y="0%" width="1100%" height="100%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="blur" />
+            <feColorMatrix in="blur" type="matrix"
+              values="0 0 0 0 0  0 0 0 0 0.9  0 0 0 0 0.9  0 0 0 3 0"
+              result="coloredBlur"
+            />
+            <feMerge>
+              <feMergeNode in="coloredBlur" />
+              <feMergeNode in="coloredBlur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
+
+        {/* Static dim line */}
+        <line x1="3" y1="0" x2="3" y2={TOTAL}
+          stroke="rgba(255,255,255,0.07)" strokeWidth="0.3" />
+
+        {/* Animated heartbeat — dim base */}
+        <path d={ecgPath} fill="none"
+          stroke="rgba(255,255,255,0.08)" strokeWidth="0.5" strokeLinecap="round" />
+
+        {/* Animated heartbeat — neon traveling pulse */}
+        <path d={ecgPath} fill="none"
+          stroke="#00eeff" strokeWidth="0.8" strokeLinecap="round"
+          filter="url(#ecgGlow)"
+          strokeDasharray={`120 ${TOTAL - 120}`}
+          className={st.ecgPulse}
+        />
+      </svg>
     </div>
 
     <div className={st.right}>
