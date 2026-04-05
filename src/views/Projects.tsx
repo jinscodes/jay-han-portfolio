@@ -1,4 +1,5 @@
 import SittingDog from "@components/SittingDog";
+import Snow from "@components/Snow";
 import st from "./projects.module.scss";
 
 interface ProjectType {
@@ -133,6 +134,7 @@ const ProjectCard = ({
 
 const Projects = () => (
   <div className={st.projects}>
+    <Snow />
     <SittingDog />
     <header className={st.header}>
       <h2 className={st.title}>Projects</h2>
