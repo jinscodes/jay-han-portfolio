@@ -254,10 +254,29 @@ function parseHex(hex: string) {
 const Fireworks = () => {
   const [mounted, setMounted] = useState(false);
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
+  const [autoIdx, setAutoIdx] = useState<number | null>(null);
 
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
+    let onTimer: ReturnType<typeof setTimeout>;
+    let offTimer: ReturnType<typeof setTimeout>;
+    const cycle = () => {
+      const idx = Math.floor(Math.random() * FIREWORKS.length);
+      setAutoIdx(idx);
+      const onDur = 1400 + Math.random() * 1200;
+      offTimer = setTimeout(() => {
+        setAutoIdx(null);
+        const pause = 600 + Math.random() * 1400;
+        onTimer = setTimeout(cycle, pause);
+      }, onDur);
+    };
+    onTimer = setTimeout(cycle, 800 + Math.random() * 1200);
+    return () => { clearTimeout(onTimer); clearTimeout(offTimer); };
+  }, [mounted]);
   if (!mounted) return null;
 
   return (
@@ -299,7 +318,7 @@ const Fireworks = () => {
       </svg>
 
       {BUILT.map((fw, fi) => {
-        const isHovered = hoveredIdx === fi;
+        const isHovered = hoveredIdx === fi || autoIdx === fi;
         const half = fw.size / 2;
         const maxLen = Math.max(...fw.lines.map((l) => l.len));
 

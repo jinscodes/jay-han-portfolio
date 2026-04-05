@@ -251,12 +251,31 @@ function lerpColor(hexA: string, hexB: string, t: number): string {
 const Tree = () => {
   const [mounted, setMounted] = useState(false);
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
+  const [autoIdx, setAutoIdx] = useState<number | null>(null);
   const maxWidths = useRef<number[]>([]);
 
   useEffect(() => {
     setMounted(true);
     maxWidths.current = TREES.map((t) => Math.max(...t.lines.map((l) => l.w)));
   }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
+    let onTimer: ReturnType<typeof setTimeout>;
+    let offTimer: ReturnType<typeof setTimeout>;
+    const cycle = () => {
+      const idx = Math.floor(Math.random() * TREES.length);
+      setAutoIdx(idx);
+      const onDur = 1600 + Math.random() * 1400;
+      offTimer = setTimeout(() => {
+        setAutoIdx(null);
+        const pause = 700 + Math.random() * 1600;
+        onTimer = setTimeout(cycle, pause);
+      }, onDur);
+    };
+    onTimer = setTimeout(cycle, 1000 + Math.random() * 1500);
+    return () => { clearTimeout(onTimer); clearTimeout(offTimer); };
+  }, [mounted]);
 
   if (!mounted) return null;
 
@@ -320,7 +339,7 @@ const Tree = () => {
 
         {/* Trees */}
         {TREES.map((tree, ti) => {
-          const isHovered = hoveredIdx === ti;
+          const isHovered = hoveredIdx === ti || autoIdx === ti;
           const maxW = maxWidths.current[ti] ?? 9.5;
           return (
             <g
@@ -400,7 +419,7 @@ const Tree = () => {
 
         {/* Grass — neon green overlay per tree, fades in only under hovered tree */}
         {TREES.map((tree, ti) => {
-          const isHovered = hoveredIdx === ti;
+          const isHovered = hoveredIdx === ti || autoIdx === ti;
           const x0 = tree.bbox.x;
           const x1 = tree.bbox.x + tree.bbox.w;
           return (
