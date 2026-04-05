@@ -54,18 +54,18 @@ const education = [
 const experience = [
   {
     name: "Union Contents",
-    detail: "Frontend Developer",
+    detail: "Software Developer & Researcher",
     period: "2022 — 2024",
   },
   { name: "Team Breedge", detail: "Co-founder, Fullstack", period: "2024 —" },
-  { name: "Team Practo", detail: "Frontend Developer", period: "2025" },
+  { name: "Team Practo", detail: "Software Developer", period: "2025" },
 ];
 
 const Info = () => (
   <div className={st.info}>
     <div className={st.left}>
       <div className={st.identity}>
-        <span className={st.tag}>Frontend Developer</span>
+        <span className={st.tag}>Software Developer</span>
         <h2 className={st.name}>Jay Han</h2>
         <p className={st.location}>Chicago, IL · Seoul, KR</p>
       </div>
@@ -129,7 +129,7 @@ const Info = () => (
 
     <div className={st.right}>
       <p className={st.bio}>
-        I&apos;m a frontend developer with a focus on building clean, performant
+        I&apos;m a software developer with a focus on building clean, performant
         interfaces. I care deeply about user experience, design systems, and
         writing code that is both readable and maintainable. Currently pursuing
         a Master&apos;s at Illinois Tech while working on side projects that
