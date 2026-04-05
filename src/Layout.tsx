@@ -1,5 +1,6 @@
 "use client";
 
+import Snow from "@components/Snow";
 import Splash from "@layouts/Splash";
 import { useEffect, useRef, useState } from "react";
 import st from "./layout.module.scss";
@@ -101,6 +102,7 @@ const Layout = () => {
 
   return (
     <>
+      <Snow />
       <div
         ref={cursorRef}
         className={`${st.cursor} ${cursorHover ? st.cursorHover : ""}`}

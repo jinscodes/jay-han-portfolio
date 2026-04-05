@@ -1,6 +1,7 @@
 @use "../common.scss";
 
 .projects {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;

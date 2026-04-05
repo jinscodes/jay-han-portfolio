@@ -96,8 +96,14 @@ const Info = () => (
       >
         <defs>
           <filter id="ecgGlow" x="-500%" y="0%" width="1100%" height="100%">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="blur" />
-            <feColorMatrix in="blur" type="matrix"
+            <feGaussianBlur
+              in="SourceGraphic"
+              stdDeviation="1.2"
+              result="blur"
+            />
+            <feColorMatrix
+              in="blur"
+              type="matrix"
               values="0 0 0 0 0  0 0 0 0 0.9  0 0 0 0 0.9  0 0 0 3 0"
               result="coloredBlur"
             />
@@ -110,16 +116,31 @@ const Info = () => (
         </defs>
 
         {/* Static dim line */}
-        <line x1="3" y1="0" x2="3" y2={TOTAL}
-          stroke="rgba(255,255,255,0.07)" strokeWidth="0.3" />
+        <line
+          x1="3"
+          y1="0"
+          x2="3"
+          y2={TOTAL}
+          stroke="rgba(255,255,255,0.07)"
+          strokeWidth="0.3"
+        />
 
         {/* Animated heartbeat — dim base */}
-        <path d={ecgPath} fill="none"
-          stroke="rgba(255,255,255,0.08)" strokeWidth="0.5" strokeLinecap="round" />
+        <path
+          d={ecgPath}
+          fill="none"
+          stroke="rgba(255,255,255,0.08)"
+          strokeWidth="0.5"
+          strokeLinecap="round"
+        />
 
         {/* Animated heartbeat — neon traveling pulse */}
-        <path d={ecgPath} fill="none"
-          stroke="#00eeff" strokeWidth="0.8" strokeLinecap="round"
+        <path
+          d={ecgPath}
+          fill="none"
+          stroke="#00eeff"
+          strokeWidth="0.8"
+          strokeLinecap="round"
           filter="url(#ecgGlow)"
           strokeDasharray={`120 ${TOTAL - 120}`}
           className={st.ecgPulse}
