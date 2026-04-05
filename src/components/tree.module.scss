@@ -4,7 +4,6 @@
   left: 0;
   width: 100%;
   z-index: 0;
-  pointer-events: none;
   user-select: none;
 }
 
@@ -25,4 +24,5 @@
   fill: none;
   stroke-width: 0.8px;
   stroke-linecap: round;
+  pointer-events: none;
 }
