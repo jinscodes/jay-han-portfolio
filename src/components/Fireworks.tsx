@@ -321,7 +321,7 @@ const Fireworks = () => {
             xmlns="http://www.w3.org/2000/svg"
           >
             {/* Invisible hover zone */}
-            <circle r={maxLen * 1.1} fill="transparent" />
+            <circle r={maxLen * 2.2} fill="transparent" />
 
             {/* Base layer — always dim */}
             <g>
