@@ -1,3 +1,7 @@
+* {
+  cursor: none !important;
+}
+
 html,
 body {
   margin: 0;
@@ -5,6 +9,7 @@ body {
   color: white;
   background-color: rgb(13, 13, 13);
   font-size: 13px;
+  cursor: none;
 
   a {
     color: white;

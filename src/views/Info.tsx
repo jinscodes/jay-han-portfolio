@@ -1,82 +1,99 @@
-import Arrow from "@assets/svg/arrow.svg";
 import st from "./info.module.scss";
 
-interface LinkGroup {
-  title?: string;
-  links: Links[];
-}
+const socialLinks = [
+  { label: "GitHub", url: "https://github.com/jinscodes" },
+  {
+    label: "LinkedIn",
+    url: "https://www.linkedin.com/in/jay-han-49974920a/",
+  },
+  { label: "Blog", url: "https://jay-h-blog.vercel.app/" },
+  { label: "Instagram", url: "https://www.instagram.com/_jay_h_99/" },
+];
 
-interface Links {
-  domain: string;
-  url: string;
-}
+const education = [
+  {
+    name: "Illinois Institute of Technology",
+    detail: "B.S. Information Technology Management",
+    period: "2025 — 2026",
+  },
+  {
+    name: "Stony Brook University, SUNY",
+    detail: "B.S. Computer Science",
+    period: "2019 — 2022",
+  },
+];
 
-const Info = () => {
-  const linkGroup: LinkGroup[] = [
-    {
-      title: "Tech",
-      links: [
-        {
-          domain: "LinkedIn",
-          url: "https://www.linkedin.com/in/jin-sung-han-49974920a/",
-        },
-        {
-          domain: "Jay's Blog",
-          url: "https://jay-h-blog.vercel.app/",
-        },
-        {
-          domain: "Github",
-          url: "https://github.com/jinscodes",
-        },
-      ],
-    },
-    {
-      title: "Personal",
-      links: [
-        {
-          domain: "Facebook",
-          url: "https://www.facebook.com/profile.php?id=100021292740024",
-        },
-        {
-          domain: "Instagram",
-          url: "https://www.instagram.com/_jay_h_99/",
-        },
-      ],
-    },
-  ];
+const experience = [
+  {
+    name: "Union Contents",
+    detail: "Frontend Developer",
+    period: "2022 — 2024",
+  },
+  { name: "Team Breedge", detail: "Co-founder, Fullstack", period: "2024 —" },
+  { name: "Team Practo", detail: "Frontend Developer", period: "2025" },
+];
 
-  const otherItems = [
-    "Stonybrook University at SUNY (2019 ~ 2022)",
-    "Union Contents Software Company (2022.08 ~ 2024.10)",
-    "Illinois Tech (2025.08 ~ ing)",
-    "Team Breeders",
-    "Team Practo",
-  ];
-
-  return (
-    <section className={st.info}>
-      <ul>
-        {linkGroup.map((group) => (
-          <div key={group.title}>
-            {group.links.map((el) => (
-              <li key={el.url}>
-                <a href={el.url} target="_blank" rel="noopener noreferrer">
-                  {el.domain}
-                  <Arrow />
-                </a>
-              </li>
-            ))}
-            <br />
-            <br />
-          </div>
-        ))}
-
-        {otherItems.map((el) => (
-          <li key={el}>{el}</li>
+const Info = () => (
+  <div className={st.info}>
+    <div className={st.left}>
+      <div className={st.identity}>
+        <span className={st.tag}>Frontend Developer</span>
+        <h2 className={st.name}>Jay Han</h2>
+        <p className={st.location}>Chicago, IL · Seoul, KR</p>
+      </div>
+      <ul className={st.links}>
+        {socialLinks.map(({ label, url }) => (
+          <li key={label}>
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={st.link}
+            >
+              <span>{label}</span>
+              <span className={st.arrow}>↗</span>
+            </a>
+          </li>
         ))}
       </ul>
-    </section>
-  );
-};
+    </div>
+
+    <div className={st.right}>
+      <p className={st.bio}>
+        I&apos;m a frontend developer with a focus on building clean, performant
+        interfaces. I care deeply about user experience, design systems, and
+        writing code that is both readable and maintainable. Currently pursuing
+        a Master&apos;s at Illinois Tech while working on side projects that
+        push what the web can do.
+      </p>
+
+      <div className={st.section}>
+        <h3 className={st.sectionTitle}>Education</h3>
+        {education.map(({ name, detail, period }) => (
+          <div key={name} className={st.row}>
+            <div className={st.rowLeft}>
+              <span className={st.rowName}>{name}</span>
+              <span className={st.rowDetail}>{detail}</span>
+            </div>
+            <span className={st.period}>{period}</span>
+          </div>
+        ))}
+      </div>
+
+      <div className={st.section}>
+        <h3 className={st.sectionTitle}>Experience</h3>
+        {experience.map(({ name, detail, period }) => (
+          <div key={name} className={st.row}>
+            <div className={st.rowLeft}>
+              <span className={st.rowName}>{name}</span>
+              <span className={st.rowDetail}>{detail}</span>
+            </div>
+            <span className={st.period}>{period}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+);
 
 export default Info;

@@ -1,6 +1,11 @@
 /* [project]/Desktop/Repo/jay-han-portfolio/src/index.css [app-client] (css) */
+* {
+  cursor: none !important;
+}
+
 html, body {
   color: #fff;
+  cursor: none;
   background-color: #0d0d0d;
   margin: 0;
   padding: 0;

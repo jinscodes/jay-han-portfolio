@@ -1,0 +1,28 @@
+.wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  height: 500px;
+}
+
+.branch {
+  stroke: rgba(255, 255, 255, 0.12);
+  fill: none;
+  stroke-linecap: round;
+}
+
+.grass {
+  stroke: rgba(255, 255, 255, 0.1);
+  fill: none;
+  stroke-width: 0.8px;
+  stroke-linecap: round;
+}

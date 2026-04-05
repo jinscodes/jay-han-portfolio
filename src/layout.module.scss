@@ -1,5 +1,39 @@
 @use "./common.scss";
 
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1.5px solid rgba(200, 200, 200, 0.6);
+  pointer-events: none;
+  z-index: 9999;
+  margin-left: -5px;
+  margin-top: -5px;
+  transition:
+    width 0.2s ease,
+    height 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    margin 0.2s ease;
+  will-change: transform;
+}
+
+.cursorHover {
+  width: 18px;
+  height: 18px;
+  margin-left: -9px;
+  margin-top: -9px;
+  border-color: rgba(255, 255, 255, 0.95);
+  box-shadow:
+    0 0 6px rgba(255, 255, 255, 1),
+    0 0 16px rgba(255, 255, 255, 0.8),
+    0 0 36px rgba(255, 255, 255, 0.5);
+}
+
 .splashLayer {
   position: fixed;
   inset: 0;
@@ -118,7 +152,8 @@
     scroll-snap-align: start;
     box-sizing: border-box;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
     background-color: common.$background-color;
     color: common.$font-color;
   }

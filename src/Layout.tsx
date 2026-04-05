@@ -29,7 +29,32 @@ type Phase = "splash" | "fading" | "done";
 const Layout = () => {
   const [phase, setPhase] = useState<Phase>("splash");
   const [activeId, setActiveId] = useState("home");
+  const [cursorHover, setCursorHover] = useState(false);
   const frameRef = useRef<HTMLElement>(null);
+  const cursorRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const move = (e: MouseEvent) => {
+      if (!cursorRef.current) return;
+      cursorRef.current.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    };
+    const over = (e: MouseEvent) => {
+      const el = e.target as HTMLElement;
+      setCursorHover(
+        !!(
+          el.closest("a, button, [role=button]") ||
+          el.tagName === "text" ||
+          el.tagName === "textPath"
+        ),
+      );
+    };
+    document.addEventListener("mousemove", move);
+    document.addEventListener("mouseover", over);
+    return () => {
+      document.removeEventListener("mousemove", move);
+      document.removeEventListener("mouseover", over);
+    };
+  }, []);
 
   useEffect(() => {
     const t1 = setTimeout(() => setPhase("fading"), 1700);
@@ -76,6 +101,10 @@ const Layout = () => {
 
   return (
     <>
+      <div
+        ref={cursorRef}
+        className={`${st.cursor} ${cursorHover ? st.cursorHover : ""}`}
+      />
       {phase !== "done" && (
         <div
           className={`${st.splashLayer} ${phase === "fading" ? st.splashFading : ""}`}
