@@ -26,3 +26,16 @@
   stroke-linecap: round;
   pointer-events: none;
 }
+
+@media (max-width: 720px) {
+  .wrapper {
+    overflow: hidden;
+  }
+
+  .svg {
+    width: 180%;
+    height: 320px;
+    transform: translateX(-22%);
+    opacity: 0.65;
+  }
+}

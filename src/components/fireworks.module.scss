@@ -23,3 +23,10 @@
     transform: translate(-50%, -50%) translateY(0px) rotate(0deg);
   }
 }
+
+@media (max-width: 720px) {
+  .fw {
+    opacity: 0.55;
+    pointer-events: none;
+  }
+}

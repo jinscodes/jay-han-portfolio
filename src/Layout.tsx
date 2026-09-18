@@ -15,7 +15,7 @@ const MENUS = [
   { label: "Info", id: "info" },
   { label: "Contact", id: "contact" },
   { label: "FAQ", id: "faq" },
-  { label: "CV", id: "resume" },
+  { label: "Resume/CV", id: "resume" },
 ];
 
 const SIZE = 460;
@@ -75,7 +75,7 @@ const Layout = () => {
           if (entry.isIntersecting) setActiveId(entry.target.id);
         });
       },
-      { threshold: 0.5 },
+      { threshold: 0, rootMargin: "-45% 0px -45% 0px" },
     );
     sections.forEach((s) => observer.observe(s));
     return () => observer.disconnect();

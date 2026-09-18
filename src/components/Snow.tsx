@@ -48,7 +48,8 @@ export default function Snow() {
     canvas.width = w;
     canvas.height = h;
 
-    const flakes: Flake[] = Array.from({ length: COUNT }, () =>
+    const flakeCount = window.innerWidth <= 720 ? 70 : COUNT;
+    const flakes: Flake[] = Array.from({ length: flakeCount }, () =>
       makeFlake(w, h),
     );
 

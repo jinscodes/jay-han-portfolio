@@ -227,3 +227,80 @@
     transform: translateY(0);
   }
 }
+
+@media (max-width: 720px) {
+  .projects {
+    height: auto;
+    min-height: 100dvh;
+    padding: 28px 20px 112px;
+    overflow: visible;
+  }
+
+  .header {
+    margin-bottom: 24px;
+    padding-bottom: 14px;
+  }
+
+  .subtitle {
+    max-width: 320px;
+    font-size: 19px;
+    line-height: 1.35;
+  }
+
+  .body {
+    flex-direction: column;
+    gap: 40px;
+    overflow: visible;
+  }
+
+  .group {
+    padding-right: 0;
+
+    &:not(:first-child) {
+      padding-left: 0;
+      border-left: 0;
+    }
+  }
+
+  .list {
+    margin: 0;
+    padding: 0;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 18px 4px;
+  }
+
+  .cardLeft {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    padding-top: 0;
+  }
+
+  .date,
+  .description {
+    font-size: 13px;
+  }
+
+  .role {
+    text-align: right;
+  }
+
+  .name,
+  .nameLink {
+    font-size: 18px;
+  }
+
+  .description {
+    line-height: 1.65;
+  }
+
+  .tag {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+}

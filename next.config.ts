@@ -3,6 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // Configure SVGR for Turbopack (Next.js 16+ default bundler)
   turbopack: {
+    root: process.cwd(),
     rules: {
       "*.svg": {
         loaders: ["@svgr/webpack"],
