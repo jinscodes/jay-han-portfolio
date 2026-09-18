@@ -10,8 +10,13 @@ const Resume = () => {
           <p className={st.eyebrow}>Curriculum Vitae</p>
           <h2 className={st.title}>Jay Han — Academic CV</h2>
         </div>
-        <a className={st.download} href={CV_PATH} download>
-          Download PDF <span aria-hidden="true">↓</span>
+        <a
+          className={st.download}
+          href={CV_PATH}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View full PDF <span aria-hidden="true">↗</span>
         </a>
       </header>
 
