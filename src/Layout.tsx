@@ -15,7 +15,7 @@ const MENUS = [
   { label: "Info", id: "info" },
   { label: "Contact", id: "contact" },
   { label: "FAQ", id: "faq" },
-  { label: "Resume", id: "resume" },
+  { label: "CV", id: "resume" },
 ];
 
 const SIZE = 460;
