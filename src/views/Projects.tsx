@@ -55,6 +55,15 @@ const corporateProjects: ProjectType[] = [
 
 const personalProjects: ProjectType[] = [
   {
+    date: "2026.05 — Present",
+    name: "DOSEBENCH",
+    role: "Researcher",
+    stack: ["LLM Evaluation", "Medical QA", "Temporal Reasoning"],
+    description:
+      "Evaluating LLM decision-making under temporal uncertainty in over-the-counter medication dosing questions.",
+    url: "https://arxiv.org/abs/2606.04262",
+  },
+  {
     date: "2024.02 — Present",
     name: "Tech Blog",
     role: "Full Stack",

@@ -1,6 +1,7 @@
 import st from "./resume.module.scss";
 
 const CV_PATH = "/Jay_Han_Academic_CV.pdf";
+const TRANSCRIPT_PATH = "/transcript-2026.pdf";
 
 const Resume = () => {
   return (
@@ -10,14 +11,23 @@ const Resume = () => {
           <p className={st.eyebrow}>Curriculum Vitae</p>
           <h2 className={st.title}>Jay Han — Academic CV</h2>
         </div>
-        <a
-          className={st.download}
-          href={CV_PATH}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View full PDF <span aria-hidden="true">↗</span>
-        </a>
+        <div className={st.documentLinks}>
+          <a
+            className={st.transcriptDownload}
+            href={TRANSCRIPT_PATH}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View full transcript PDF"
+          />
+          <a
+            className={st.download}
+            href={CV_PATH}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View full PDF <span aria-hidden="true">↗</span>
+          </a>
+        </div>
       </header>
 
       <div className={st.document}>
